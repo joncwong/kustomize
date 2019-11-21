@@ -162,8 +162,6 @@ metadata:
 		"--user", "nobody",
 		"--security-opt=no-new-privileges",
 	}
-
-	expected = append(expected)
 	for _, e := range os.Environ() {
 		// the process env
 		expected = append(expected, "-e", strings.Split(e, "=")[0])
